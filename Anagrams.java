@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class Solution {
 static boolean isAnagram(String a, String b) { 
-            
+            // returns directly not anagrams if two strings are of variable length
+            if(a.length() != b.length())
+                        return false;
           char[] ar = a.toLowerCase().toCharArray();
           char[] br = b.toLowerCase().toCharArray();
           java.util.HashMap<Character,Integer> amap = new java.util.HashMap<Character,Integer>();
